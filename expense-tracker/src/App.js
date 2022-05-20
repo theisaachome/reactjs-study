@@ -31,6 +31,7 @@ function App() {
        return [expense, ...prevState];
      })
   }
+ 
   return (
     <div>
       <h2>Let's get started!</h2>
