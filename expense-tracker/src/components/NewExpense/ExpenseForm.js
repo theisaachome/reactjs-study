@@ -1,7 +1,7 @@
 import React,{useState} from 'react';
 import "./ExpenseForm.css";
 
-const ExpenseForm = ({onSaveExpenseData}) => {
+const ExpenseForm = ({onToggle,onSaveExpenseData}) => {
     
     const [userInputs, setUserInputs] = useState({title:'',amount:'',date:''});
 
@@ -18,7 +18,7 @@ const ExpenseForm = ({onSaveExpenseData}) => {
         event.preventDefault();
         const expenseData = {
             title,
-            amount,
+            amount:+amount,
             date:new Date(date)
         }
         onSaveExpenseData(expenseData);
@@ -57,6 +57,7 @@ const ExpenseForm = ({onSaveExpenseData}) => {
             </div>
         </div>
         <div className="new-expense__actions">
+            <button onClick={onToggle} type='submit'>Cancel</button>
             <button type='submit'>Add Expense</button>
         </div>
     </form>
