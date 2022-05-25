@@ -1,1 +1,1 @@
-# Getting Started Guide for using the projects
+# Getting Started with the projects
