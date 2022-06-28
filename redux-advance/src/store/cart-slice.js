@@ -41,5 +41,10 @@ const cartSlice =createSlice({
     }
 });
 
+const sendCart = (cartData)=>{
+    return (dispatch)=>{
+        dispatch();
+    }
+}
 export const{addItemToCart,removeItemFromCart} = cartSlice.actions;
 export default cartSlice;
